@@ -31,6 +31,13 @@ public class WebActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.setPadding(0, 0, 0, 0);
+        webView.setScrollbarFadingEnabled(true);
+        webView.setInitialScale(1);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
         webView.setWebViewClient(new mWebViewClient());
